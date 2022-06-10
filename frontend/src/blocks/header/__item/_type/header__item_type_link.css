@@ -1,0 +1,10 @@
+.header__item_type_link {
+  transition: .5s;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+}
+
+.header__item_type_link:hover {
+  opacity: .6;
+}

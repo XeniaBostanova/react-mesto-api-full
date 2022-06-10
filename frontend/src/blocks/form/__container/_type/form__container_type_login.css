@@ -1,0 +1,9 @@
+.form__container_type_login {
+  padding-bottom: 112px;
+}
+
+@media screen and (max-width: 767px) {
+  .form__container_type_login {
+    padding-bottom: 77px;
+  }
+}

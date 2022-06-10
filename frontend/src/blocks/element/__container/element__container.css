@@ -1,0 +1,8 @@
+.element__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 20px 19px 21px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

@@ -1,0 +1,20 @@
+.header__item {
+  margin: 0;
+  padding-left: 24px;
+  padding-top: 6px;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 500;
+  color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  .header__item {
+    padding: 0;
+  }
+
+  .header__item:last-child {
+    padding-top: 18px;
+  }
+
+}

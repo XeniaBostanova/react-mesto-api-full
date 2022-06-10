@@ -1,0 +1,11 @@
+.form__item_theme_dark {
+  border-bottom: 2px solid #ccc;
+  color: #ccc;
+  background-color: #000;
+  padding-top: 0;
+}
+@media screen and (max-width: 767px) {
+  .form__item_theme_dark {
+    max-width: 260px;
+  }
+}

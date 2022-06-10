@@ -1,0 +1,15 @@
+@media screen and (max-width: 767px) {
+  .header__open-button {
+    background: url(../../../images/burger-menu.svg) transparent center no-repeat;
+    background-size: contain;
+    width: 24px;
+    height: 18px;
+    padding-top: 5px;
+    padding-right: 60px;
+    transition: .5s;
+  }
+
+  .header__open-button:hover {
+    opacity: .6;
+  }
+}

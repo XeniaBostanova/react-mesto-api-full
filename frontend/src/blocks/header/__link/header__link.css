@@ -1,0 +1,27 @@
+.header__link {
+  margin: 0;
+  padding-left: 24px;
+  padding-top: 6px;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+  transition: .5s;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+}
+
+.header__link:hover {
+  opacity: .6;
+}
+
+@media screen and (max-width: 424px) {
+  .header__link {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .header__link:last-child {
+    padding-right: 30px;
+  }
+}

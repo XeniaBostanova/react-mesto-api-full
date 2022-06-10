@@ -1,0 +1,12 @@
+.popup__container_type_info {
+  padding: 0;
+  width: 430px;
+  min-height: 330px;
+}
+
+@media screen and (max-width: 424px) {
+  .popup__container_type_info {
+    width: 308px;
+    min-height: 280px;
+  }
+}
