@@ -88,8 +88,8 @@ function App() {
     setSelectedCard({name: card.name, link: card.link});
   }
 
-  function handleUpdateUser(data) {
-    api.editProfile(data)
+  function handleUpdateUser(user) {
+    api.editProfile(user.name, user.about)
       .then((res) => {
         setCurrentUser(res);
         closeAllPopups();
@@ -97,8 +97,8 @@ function App() {
       .catch((err) => console.log(err))
   }
 
-  function handleUpdateAvatar(data) {
-    api.editAvatar(data)
+  function handleUpdateAvatar(user) {
+    api.editAvatar(user.avatar)
       .then((res) => {;
         setCurrentUser(res);
         closeAllPopups();

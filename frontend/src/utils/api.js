@@ -6,7 +6,7 @@ class Api {
   get _headers() {
     return {
       'Content-Type': 'application/json',
-      authorization: `Bearer ${localStorage.getItem("jwt")}`,
+      'Authorization': `Bearer ${localStorage.getItem("jwt")}`,
     }
   }
 
@@ -66,11 +66,11 @@ class Api {
         .then(this._getResponseData)
   }
 
-  editAvatar(data) {
+  editAvatar({avatar}) {
     return fetch(`${this._baseUrl}/users/me/avatar`, {
       method: "PATCH",
       headers: this._headers,
-      body: JSON.stringify(data)
+      body: JSON.stringify({avatar})
     })
       .then(this._getResponseData)
   }
