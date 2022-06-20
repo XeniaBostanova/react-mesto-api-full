@@ -35,7 +35,7 @@ function App() {
     Promise.all([api.getProfile(), api.getInitialCards()])
       .then(([userData, cardData]) => {
         setCurrentUser(userData);
-        setCards(cardData);
+        setCards(cardData.data);
       })
       .catch((err) => console.log(err))
     }
@@ -88,8 +88,8 @@ function App() {
     setSelectedCard({name: card.name, link: card.link});
   }
 
-  function handleUpdateUser(user) {
-    api.editProfile(user.name, user.about)
+  function handleUpdateUser(data) {
+    api.editProfile(data)
       .then((res) => {
         setCurrentUser(res);
         closeAllPopups();
@@ -97,8 +97,8 @@ function App() {
       .catch((err) => console.log(err))
   }
 
-  function handleUpdateAvatar(user) {
-    api.editAvatar(user.avatar)
+  function handleUpdateAvatar(data) {
+    api.editAvatar(data)
       .then((res) => {;
         setCurrentUser(res);
         closeAllPopups();
@@ -106,8 +106,8 @@ function App() {
       .catch((err) => console.log(err))
   }
 
-  function handleAddPlaceSubmit(card) {
-    api.addCard(card.name, card.link)
+  function handleAddPlaceSubmit(data) {
+    api.addCard(data)
       .then((newCard) => {
         setCards([newCard, ...cards]);
         closeAllPopups();
@@ -153,7 +153,7 @@ function App() {
       auth.getContent(jwt)
         .then((res) => {
           if (res) {
-            setUserEmail(res.data.email);
+            setUserEmail(res.email);
             history.push('/');
           }
         })

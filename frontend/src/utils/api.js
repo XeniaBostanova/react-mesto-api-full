@@ -31,26 +31,20 @@ class Api {
       .then(this._getResponseData)
   }
 
-  editProfile(name, about) {
+  editProfile(data) {
     return fetch(`${this._baseUrl}/users/me`, {
       method: "PATCH",
       headers: this._headers,
-      body: JSON.stringify({
-        name,
-        about
-      })
+      body: JSON.stringify(data)
     })
       .then(this._getResponseData)
   }
 
-  addCard(name, link) {
+  addCard(data) {
     return fetch(`${this._baseUrl}/cards`, {
       method: "POST",
       headers: this._headers,
-      body: JSON.stringify({
-        name,
-        link
-      })
+      body: JSON.stringify(data)
     })
       .then(this._getResponseData)
   }
@@ -72,13 +66,11 @@ class Api {
         .then(this._getResponseData)
   }
 
-  editAvatar(avatar) {
+  editAvatar(data) {
     return fetch(`${this._baseUrl}/users/me/avatar`, {
       method: "PATCH",
       headers: this._headers,
-      body: JSON.stringify({
-        avatar
-      })
+      body: JSON.stringify(data)
     })
       .then(this._getResponseData)
   }
