@@ -31,11 +31,11 @@ class Api {
       .then(this._getResponseData)
   }
 
-  editProfile(data) {
+  editProfile({name, about}) {
     return fetch(`${this._baseUrl}/users/me`, {
       method: "PATCH",
       headers: this._headers,
-      body: JSON.stringify(data)
+      body: JSON.stringify({name, about})
     })
       .then(this._getResponseData)
   }

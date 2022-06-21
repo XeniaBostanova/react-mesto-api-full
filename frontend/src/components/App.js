@@ -88,8 +88,8 @@ function App() {
     setSelectedCard({name: card.name, link: card.link});
   }
 
-  function handleUpdateUser(user) {
-    api.editProfile(user.name, user.about)
+  function handleUpdateUser({name, about}) {
+    api.editProfile({name, about})
       .then((res) => {
         setCurrentUser(res);
         closeAllPopups();
