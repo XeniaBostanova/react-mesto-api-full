@@ -41,6 +41,8 @@ app.get('/crash-test', () => {
   }, 0);
 });
 
+console.log(process.env.NODE_ENV)
+
 app.post('/signin', celebrate({
   body: Joi.object().keys({
     email: Joi.string().email().required(),

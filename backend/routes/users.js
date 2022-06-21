@@ -9,6 +9,8 @@ const {
 } = require('../controllers/users');
 const { reg } = require('../utils/reg');
 
+require('dotenv').config();
+
 router.get('/', getUsers);
 
 router.get('/me', getCurrentUser);
