@@ -35,7 +35,7 @@ function App() {
     Promise.all([api.getProfile(), api.getInitialCards()])
       .then(([userData, cardData]) => {
         setCurrentUser(userData);
-        setCards(cardData.data);
+        setCards(cardData);
       })
       .catch((err) => console.log(err))
     }
@@ -134,7 +134,7 @@ function App() {
     auth.authorize(email, password)
       .then((res) => {
         if (res) {
-          localStorage.setItem('jwt', res.jwt);
+          localStorage.setItem('jwt', res.token);
           setLoggedIn(true);
           setUserEmail(email);
           history.push('/');

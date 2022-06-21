@@ -78,5 +78,5 @@ class Api {
 }
 
 export const api = new Api({
-  baseUrl: 'https://api.study.hard.nomoreparties.sbs',
+  baseUrl: 'http://localhost:3000',
 });
