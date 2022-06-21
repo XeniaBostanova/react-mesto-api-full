@@ -1,7 +1,7 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-require('dotenv').config();
 const { celebrate, Joi, errors } = require('celebrate');
 const cookieParser = require('cookie-parser');
 const helmet = require('helmet');
@@ -40,8 +40,6 @@ app.get('/crash-test', () => {
     throw new Error('Сервер сейчас упадёт');
   }, 0);
 });
-
-console.log(process.env.NODE_ENV)
 
 app.post('/signin', celebrate({
   body: Joi.object().keys({
